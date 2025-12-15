@@ -6,10 +6,10 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -20,22 +20,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HaritaP">
-
+        <activity
+            android:name=".NewReportActivity"
+            android:exported="false" />
         <!-- GOOGLE MAPS API KEY -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC87jAg6gAsRWf24aUuIwcbYgcHG0_AhIo" />
-
-        <!-- İLK AÇILAN SAYFA BURASI OLMALI -->
-        <activity android:name=".MainActivity"
+            android:value="AIzaSyC87jAg6gAsRWf24aUuIwcbYgcHG0_AhIo" /> <!-- İLK AÇILAN SAYFA BURASI OLMALI -->
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- MapActivity normal activity -->
+        </activity> <!-- MapActivity normal activity -->
         <activity android:name=".MapActivity" />
     </application>
 
