@@ -9,12 +9,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)  // activity_main.xml ile aynı olmalı
+        setContentView(R.layout.activity_main)
 
         val openMapBtn = findViewById<Button>(R.id.openMapBtn)
+        val openNewReportBtn = findViewById<Button>(R.id.openNewReportBtn)
 
         openMapBtn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+        }
+
+        openNewReportBtn.setOnClickListener {
+            val intent = Intent(this, NewReportActivity::class.java)
             startActivity(intent)
         }
     }
