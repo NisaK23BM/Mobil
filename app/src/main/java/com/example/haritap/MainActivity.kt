@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val openMapBtn = findViewById<Button>(R.id.openMapBtn)
         val openNewReportBtn = findViewById<Button>(R.id.openNewReportBtn)
+        val profileButton = findViewById<Button>(R.id.profileButton)
 
         openMapBtn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         openNewReportBtn.setOnClickListener {
             val intent = Intent(this, NewReportActivity::class.java)
             startActivity(intent)
+        }
+        profileButton.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
         }
     }
 }
