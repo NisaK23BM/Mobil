@@ -5,15 +5,48 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bildirim Ayarları"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <Switch
+        android:id="@+id/switchGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genel Bildirimler"/>
+
+    <Switch
+        android:id="@+id/switchUrgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acil Bildirimler"/>
+
+    <Switch
+        android:id="@+id/switchLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Konuma Dayalı Bildirimler"/>
+
     <Button
         android:id="@+id/openMapBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Haritayı Aç" />
+
     <Button
         android:id="@+id/openNewReportBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Yeni Rapor Oluştur"
         android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profil" />
+
 </LinearLayout>

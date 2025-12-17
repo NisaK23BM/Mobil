@@ -50,6 +50,7 @@ class NewReportActivity : AppCompatActivity() {
         //  GÖNDER BUTONU
         btn.setOnClickListener {
 
+
             if (title.text.isBlank() || desc.text.isBlank()) {
                 Toast.makeText(
                     this,
@@ -58,14 +59,13 @@ class NewReportActivity : AppCompatActivity() {
                 ).show()
             } else {
 
-                val intent = Intent(this, MapActivity::class.java)
-                intent.putExtra("type", spinner.selectedItem.toString())
-                intent.putExtra("title", title.text.toString())
-                intent.putExtra("desc", desc.text.toString())
-                intent.putExtra("lat", lat)
-                intent.putExtra("lng", lng)
 
-                startActivity(intent)
+                Toast.makeText(
+                    this,
+                    "Bildirim başarıyla gönderildi",
+                    Toast.LENGTH_LONG
+                ).show()
+
                 finish()
             }
         }

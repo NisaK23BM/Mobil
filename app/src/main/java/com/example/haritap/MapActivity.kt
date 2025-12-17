@@ -1,11 +1,13 @@
 package com.example.haritap
 
-import androidx.appcompat.app.AppCompatActivity
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -13,12 +15,13 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
     private lateinit var fusedLocationClient: FusedLocationProviderClient
-    // İzin isteği için sabit bir kod tanımlamak en iyi pratiktir.
+
     private val LOCATION_PERMISSION_REQUEST_CODE = 1001
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +34,21 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
-        // runtime permission kontrolü
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), 1001)
+        checkLocationPermission()
+    }
+
+    //  KONUM İZNİ KONTROLÜ
+    private fun checkLocationPermission() {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
         }
     }
 
@@ -41,16 +56,19 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         map = googleMap
         map.uiSettings.isZoomControlsEnabled = true
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            map.isMyLocationEnabled = true
-            fusedLocationClient.lastLocation.addOnSuccessListener { loc ->
-                loc?.let {
-                    val myLoc = LatLng(it.latitude, it.longitude)
-                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(myLoc, 14f))
-                }
-            }
-        }
+        enableMyLocation()
+        getCurrentLocation()
+
+        // HARİTAYA TIKLAYINCA → NEW REPORT
         map.setOnMapClickListener { latLng ->
+
+            map.clear()
+            map.addMarker(
+                MarkerOptions()
+                    .position(latLng)
+                    .title("Seçilen Konum")
+            )
+
             val intent = Intent(this, NewReportActivity::class.java)
             intent.putExtra("lat", latLng.latitude)
             intent.putExtra("lng", latLng.longitude)
@@ -58,5 +76,64 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
-    // onRequestPermissionsResult -> izin verildiyse tekrar konumu al
+    //  MEVCUT KONUMU AL
+    private fun getCurrentLocation() {
+
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) return
+
+        fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+            location?.let {
+
+                val myLocation = LatLng(it.latitude, it.longitude)
+
+                map.addMarker(
+                    MarkerOptions()
+                        .position(myLocation)
+                        .title("Şu anki konumum")
+                )
+
+                map.animateCamera(
+                    CameraUpdateFactory.newLatLngZoom(myLocation, 15f)
+                )
+            }
+        }
+    }
+
+    //  HARİTADA MAVİ NOKTA
+    private fun enableMyLocation() {
+        if (ActivityCompat.checkSelfPermission(
+                this,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
+            map.isMyLocationEnabled = true
+        }
+    }
+
+    //  İZİN VERİLDİKTEN SONRA TEKRAR DENEME
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE &&
+            grantResults.isNotEmpty() &&
+            grantResults[0] == PackageManager.PERMISSION_GRANTED
+        ) {
+            enableMyLocation()
+            getCurrentLocation()
+        } else {
+            Toast.makeText(
+                this,
+                "Konum izni verilmedi",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
 }
