@@ -16,10 +16,21 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import androidx.lifecycle.lifecycleScope
+import com.example.haritap.data.AppDatabase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import com.google.android.gms.maps.model.Marker
+
+
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
+
+    private var selectedMarker: Marker? = null
+
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private val LOCATION_PERMISSION_REQUEST_CODE = 1001
@@ -58,11 +69,17 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
         enableMyLocation()
         getCurrentLocation()
+        loadReportsOnMap()
+
 
         // HARİTAYA TIKLAYINCA → NEW REPORT
         map.setOnMapClickListener { latLng ->
 
-            map.clear()
+            selectedMarker?.remove()
+            selectedMarker = map.addMarker(
+                MarkerOptions().position(latLng).title("Seçilen Konum")
+            )
+
             map.addMarker(
                 MarkerOptions()
                     .position(latLng)
@@ -136,4 +153,20 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             ).show()
         }
     }
+    private fun loadReportsOnMap() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val reports = AppDatabase.getInstance(this@MapActivity).reportDao().getAll()
+            withContext(Dispatchers.Main) {
+                for (r in reports) {
+                    map.addMarker(
+                        MarkerOptions()
+                            .position(LatLng(r.latitude, r.longitude))
+                            .title(r.title)
+                            .snippet("${r.type} • ${r.status}")
+                    )
+                }
+            }
+        }
+    }
+
 }

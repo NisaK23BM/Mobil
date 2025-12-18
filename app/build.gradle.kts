@@ -1,8 +1,9 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.google.gms.google.services)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
 }
+
 
 android {
     namespace = "com.example.haritap"
@@ -49,6 +50,13 @@ dependencies {
 
     // Lifecycle kütüphanesi eksikti, eklendi.
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+
+
+
 
     // Google Maps ve Location
     implementation("com.google.android.gms:play-services-maps:18.2.0") // DÜZELTME 5: Versiyonlar standart hale getirildi.

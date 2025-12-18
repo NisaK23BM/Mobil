@@ -1,5 +1,3 @@
-// settings.gradle.kts DOSYASI
-
 pluginManagement {
     repositories {
         google()
@@ -7,14 +5,15 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS) // Bu satır hatanın nedenini açıklar
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        // Gerekirse başka depolar, örn: jcenter() veya maven { url '...' }
     }
 }
+
 
 rootProject.name = "HaritaP"
 include(":app")

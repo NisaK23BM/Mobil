@@ -7,6 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
+import com.example.haritap.data.AppDatabase
+import com.example.haritap.data.entity.ReportEntity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+
 
 class NewReportActivity : AppCompatActivity() {
 
@@ -50,23 +58,28 @@ class NewReportActivity : AppCompatActivity() {
         //  GÖNDER BUTONU
         btn.setOnClickListener {
 
-
             if (title.text.isBlank() || desc.text.isBlank()) {
-                Toast.makeText(
-                    this,
-                    "Lütfen tüm alanları doldurun",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
+                Toast.makeText(this, "Lütfen tüm alanları doldurun", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
+            val report = ReportEntity(
+                type = spinner.selectedItem.toString(),
+                title = title.text.toString().trim(),
+                description = desc.text.toString().trim(),
+                latitude = lat,
+                longitude = lng,
+                createdAt = System.currentTimeMillis(),
+                status = "Açık"
+            )
 
-                Toast.makeText(
-                    this,
-                    "Bildirim başarıyla gönderildi",
-                    Toast.LENGTH_LONG
-                ).show()
+            lifecycleScope.launch(Dispatchers.IO) {
+                AppDatabase.getInstance(this@NewReportActivity).reportDao().insert(report)
 
-                finish()
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@NewReportActivity, "Bildirim kaydedildi", Toast.LENGTH_LONG).show()
+                    finish()
+                }
             }
         }
     }

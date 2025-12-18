@@ -49,4 +49,21 @@
         android:layout_height="wrap_content"
         android:text="Profil" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bildirimler"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReports"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"/>
+
+
+
 </LinearLayout>
