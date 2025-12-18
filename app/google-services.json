@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177517825242",
+    "project_id": "haritap-6880f",
+    "storage_bucket": "haritap-6880f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177517825242:android:0c79d1e913b999c6cfe9e3",
+        "android_client_info": {
+          "package_name": "com.example.haritap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzO02EJ9-pObwalBDU5MKRxJtBQWZTloU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
