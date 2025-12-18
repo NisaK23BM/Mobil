@@ -43,6 +43,21 @@
         android:text="Yeni Rapor Oluştur"
         android:layout_marginTop="16dp"/>
 
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ara (başlık / açıklama)"
+        android:inputType="text"
+        android:layout_marginTop="12dp"/>
+
+    <Spinner
+        android:id="@+id/spFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+
+
     <Button
         android:id="@+id/profileButton"
         android:layout_width="wrap_content"

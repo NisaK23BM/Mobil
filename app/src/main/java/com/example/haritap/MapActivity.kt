@@ -25,6 +25,7 @@ import com.google.android.gms.maps.model.Marker
 
 
 
+
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var map: GoogleMap
@@ -73,23 +74,16 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         // HARİTAYA TIKLAYINCA → NEW REPORT
-        map.setOnMapClickListener { latLng ->
-
-            selectedMarker?.remove()
-            selectedMarker = map.addMarker(
-                MarkerOptions().position(latLng).title("Seçilen Konum")
-            )
-
-            map.addMarker(
-                MarkerOptions()
-                    .position(latLng)
-                    .title("Seçilen Konum")
-            )
-
-            val intent = Intent(this, NewReportActivity::class.java)
-            intent.putExtra("lat", latLng.latitude)
-            intent.putExtra("lng", latLng.longitude)
-            startActivity(intent)
+        map.setOnMarkerClickListener { marker ->
+            val id = marker.tag as? Long
+            if (id != null) {
+                val i = Intent(this, ReportDetailActivity::class.java)
+                i.putExtra("reportId", id)
+                startActivity(i)
+                true
+            } else {
+                false
+            }
         }
     }
 
@@ -158,12 +152,13 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             val reports = AppDatabase.getInstance(this@MapActivity).reportDao().getAll()
             withContext(Dispatchers.Main) {
                 for (r in reports) {
-                    map.addMarker(
+                    val m = map.addMarker(
                         MarkerOptions()
                             .position(LatLng(r.latitude, r.longitude))
                             .title(r.title)
                             .snippet("${r.type} • ${r.status}")
                     )
+                    m?.tag = r.id
                 }
             }
         }

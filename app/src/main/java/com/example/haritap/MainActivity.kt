@@ -13,9 +13,22 @@ import com.example.haritap.ui.ReportAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.ArrayAdapter
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.AdapterView
+
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var rvReports: RecyclerView
+    private lateinit var etSearch: android.widget.EditText
+    private lateinit var spFilter: android.widget.Spinner
+    private lateinit var adapter: ReportAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,23 +50,79 @@ class MainActivity : AppCompatActivity() {
         profileButton.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
-        val rvReports = findViewById<RecyclerView>(R.id.rvReports)
+        rvReports = findViewById(R.id.rvReports)
+        etSearch = findViewById(R.id.etSearch)
+        spFilter = findViewById(R.id.spFilter)
 
-        val adapter = ReportAdapter(emptyList()) { report ->
-            Toast.makeText(this, report.title, Toast.LENGTH_SHORT).show()
+        adapter = ReportAdapter(emptyList()) { report ->
+            val i = Intent(this, ReportDetailActivity::class.java)
+            i.putExtra("reportId", report.id)
+            startActivity(i)
         }
 
         rvReports.layoutManager = LinearLayoutManager(this)
         rvReports.adapter = adapter
 
-        lifecycleScope.launch(Dispatchers.IO) {
-            val list = AppDatabase.getInstance(this@MainActivity)
-                .reportDao()
-                .getAll()
+        val filters = listOf("Hepsi", "Açık", "Sağlık", "Güvenlik", "Çevre", "Kayıp", "Teknik")
+        spFilter.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, filters)
 
+// İlk yükleme
+        applyFilter("Hepsi", "")
+
+// Filtre değişince
+        spFilter.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: android.view.View?, position: Int, id: Long) {
+                applyFilter(filters[position], etSearch.text.toString())
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
+// Arama yazınca
+        etSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable?) {
+                val q = s?.toString() ?: ""
+                val f = spFilter.selectedItem?.toString() ?: "Hepsi"
+                applyFilter(f, q)
+            }
+        })
+
+    }
+    override fun onResume() {
+        super.onResume()
+        val rvReports = findViewById<RecyclerView>(R.id.rvReports)
+        val adapter = rvReports.adapter as? ReportAdapter ?: return
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            val list = AppDatabase.getInstance(this@MainActivity).reportDao().getAll()
             withContext(Dispatchers.Main) {
                 adapter.submit(list)
             }
         }
     }
+    private fun applyFilter(filter: String, query: String) {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val dao = AppDatabase.getInstance(this@MainActivity).reportDao()
+
+            val baseList = when (filter) {
+                "Hepsi" -> dao.getAll()
+                "Açık" -> dao.getOpen()
+                else -> dao.getByType(filter)
+            }
+
+            val finalList = if (query.isBlank()) {
+                baseList
+            } else {
+                val searched = dao.search(query)
+                val allowedIds = baseList.map { it.id }.toSet()
+                searched.filter { allowedIds.contains(it.id) }
+            }
+
+            withContext(Dispatchers.Main) {
+                adapter.submit(finalList)
+            }
+        }
+    }
+
 }
