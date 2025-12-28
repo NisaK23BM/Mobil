@@ -4,6 +4,8 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.haritap.data.entity.ReportEntity
+import androidx.room.Delete
+
 
 @Dao
 interface ReportDao {
@@ -33,4 +35,9 @@ interface ReportDao {
 
     @Query("UPDATE reports SET status = :status WHERE id = :id")
     suspend fun updateStatus(id: Long, status: String)
+
+    @Query("SELECT * FROM reports WHERE id IN (:ids) ORDER BY id DESC")
+    suspend fun getByIds(ids: List<Long>): List<ReportEntity>
+    @Delete
+    suspend fun delete(report: ReportEntity)
 }

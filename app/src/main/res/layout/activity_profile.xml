@@ -33,6 +33,13 @@
         android:layout_height="wrap_content"
         android:text="Rol: Standart Kullanıcı"/>
 
+    <TextView
+        android:id="@+id/tvDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birim: -" />
+
+
     <Button
         android:id="@+id/btnFollowedReports"
         android:text="Takip Edilen Bildirimler"

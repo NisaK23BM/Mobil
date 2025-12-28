@@ -1,10 +1,954 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_admin_panel.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_announcements.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_followed_reports.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_map.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_report_detail.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_announcement.xml">
+        <config>
+          <theme>@style/Theme.HaritaP</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8d799b1-966d-476b-8878-5de8051515cf" name="Changes" comment="" />
+    <list default="true" id="2895228a-c35c-4bc9-a691-a831533b5ae6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/AdminPanelActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/AnnouncementAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/AnnouncementStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/AnnouncementsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/AuthStore.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/FollowedReportsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/ForgotPasswordActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/LoginActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/RegisterActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/SplashActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/UserPrefs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_admin_panel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_announcements.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_followed_reports.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_announcement.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/8.13/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.idea/AndroidProjectSystem.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.idea/deviceManager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ActivityMainBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ActivityMapBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ActivityNewReportBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ActivityProfileBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ActivityReportDetailBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ActivitySettingsBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/data_binding_base_class_source_out/debug/out/com/example/haritap/databinding/ItemReportBinding.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/ksp/debug/java/com/example/haritap/data/AppDatabase_Impl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/generated/ksp/debug/java/com/example/haritap/data/dao/ReportDao_Impl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/annotation_processor_list/debug/javaPreCompileDebug/annotationProcessors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/apk/debug/app-debug.apk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/apk/debug/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/apk_ide_redirect_file/debug/createDebugApkListingFileRedirect/redirect.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/app_metadata/debug/writeDebugAppMetadata/app-metadata.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/compatible_screen_manifest/debug/createDebugCompatibleScreenManifests/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_base_class_log_artifact/debug/dataBindingGenBaseClassesDebug/out/com.example.haritap-binding_classes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/activity_main-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/activity_map-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/activity_new_report-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/activity_profile-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/activity_report_detail-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/activity_settings-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_merge/debug/mergeDebugResources/out/item_report-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/activity_main-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/activity_map-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/activity_new_report-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/activity_profile-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/activity_report_detail-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/activity_settings-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/data_binding_layout_info_type_package/debug/packageDebugResources/out/item_report-layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_0/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_1/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_2/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/dirs_bucket_3/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_3da9cb1420610fbffa7f72ac1156971cfb61170a56241b95bdb3b769081081d2_bucket_0/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_3da9cb1420610fbffa7f72ac1156971cfb61170a56241b95bdb3b769081081d2_bucket_1/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_3da9cb1420610fbffa7f72ac1156971cfb61170a56241b95bdb3b769081081d2_bucket_2/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_3da9cb1420610fbffa7f72ac1156971cfb61170a56241b95bdb3b769081081d2_bucket_3/graph.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeProjectDexDebug/15/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex_archive_input_jar_hashes/debug/dexBuilderDebug/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/dex_number_of_buckets_file/debug/dexBuilderDebug/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/dataBindingGenBaseClassesDebug/base_builder_log.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+u1tSvAs7OwIivjGf0HrfpBNFZA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/02jBPxSDlLhea6d+b07JczOBb6I=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/0KgfRhkb5kafnhUiNlfs7wYRQuc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/1xa_7pK85IwHAN+d8+Z1NPWZbdY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3bgurGgzfOcXa9mZBkuTVB4w01A=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3cp7vBJMIEcCkRpkWyKiJWHNbLU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3ok6PgW2nigvfMJSQKjxhsvJcDA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/3pHPChkdcq1_0lwoPGSIgYO_Kfc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/4CwqZb4hun6FXKDMWwePtT9AtU8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/5w+sVJlcr+mr8mUBvD+sSz9ApY0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/63UAX3OIF21_mhC1PF_mzjhzfek=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/6i+C__AbKKXS2aaimAjHKTMgUaI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/73tGSP0K3AeRx9jXPeEKz0ba2kc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8cFXa6TLzOaj_kiMin_fxPWi0dE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/A0x7SqF_Wy2MlGGQc_bvW+24SyY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/B4lvKIJTeF8+yJcu+fAC7D4St2s=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Bi2qtORdvg3XSbOaF50ms4tvWBU=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/CBekWGhAs_ETSXO12ZjALLUdbeE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/D1e2OPMtqvTi3nc6OlJiHDOoeU0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/DPJpyozamSn8kYYAo7UkOIeoLeY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EQDU6IAj9YJHDZZY7CqjbOB21cw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/EVABMqcZ8idCRCK81sYk_yy12vM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/G9R_ujpNByey5l+4vH6KyvxdZxo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/GVFYm26pGsy4p17nM2pRV_ukHNM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HK8ubfoUNcKfQayo05FnevZc5ok=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/HpWLT3uf68HrdWiPPuJ21P3275U=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ITidVwD7I7mCCP4vittaugMjFtA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/K_CU+x3ENLiPkh_WlRNTh5b2eHw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/LWzSAmtnFzoKZE6rmC6bhcYOwRo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/LopCWXrxMspHRzJqDPIeyMgsRUA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/MP97YX99+xkgjyuv5rTXyAnwYE4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/MSc1wvvTp_+pLaeT_DCOCVpi_bo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/NKd4yW+wNBunU4wm_no9xFyGMkI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/P1H_Kf_I+1Akr72qhMxSHwS+lY4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PRe5rr_wK6gOR8bKVWn8j0ZU5uc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PlED3+30g_x2VbSwCq0fjPLrD7E=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/PuRS1S3pByLzVpGgyNiIDATPywI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Q_sCJFAVfzBtMZP+w1mzrTEJ4mc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/StZZeCF33buVPfY_M30koYs4k_w=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/T+TGxfhp7PsFmMMrsYY52CTEU0c=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TMPbhj6WSjffxwSQjZZ_gnCpYMo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/TUmP+h4r7ma+7NCOh7YbvBOGGE0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Uts4aX6hv7K3_sU2tRMEaRguCok=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/VfrLiItS13m2FVJW4W1qNagjiaY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/Wy2yQnVoeH3Q1El3Ysk7+gls7ao=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/XTvnRM6blXz8YhCvET9zIvEJPtQ=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/XnK0louSRngD+k7Kl9ERG_yqFOk=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZLjF8KL1piUCR0VkJuvUrL9UkSc=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZQABLSw9Ock5u0oV+HemjXbv_TI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ZZV3pOmyByAcIcNeGMfIKIi8Utw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_fCvL4o54AbiZHlUJOjz6iaYO3k=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_mLG3JxsuwSb+6bKK+tA4EnW0_Y=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/_qjJ93qZYbMklLJaawVVi7Aaf40=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/bWsOvjFeRltXPX0S8LEcrNh5cWk=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/bpsHUJtcvpp_N51Ol3E3d4yv+88=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cDjsD1jGiSE19x8HSx71hylM7cM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cqWcHdNs3lRWRTJLgRvVo_onsPo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cvmARMcjHiVspGStnvEAZYu6xGE=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fCh9p+NRh62CBRbxqIILxGXaqiA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gck5ISUvTaskMhFxoRkF3e5X3NA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/giKCjuRk3ru75j7V5Pamyvr1bS8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/gw3tiupMmNQTBY10KrqiVSWV14o=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/h8HrZluld6cf7KEWVfw4AzY9LuI=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/hEZh3BGzPrfq+rKDdgSPzmQp1b0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/hRWvfArXARo5Exh9_9yyzaJ+9a0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/iKg+OE0IZr9XZjiPikSyZfWSeG4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/j6Eppar03gV2xbpIR1G9NrXGUD8=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/ka27ecDZB7UR0Px_uzD0riNawHY=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/mQfB2cIsGLZND8C3k9QE0Ogtvkw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/oEtgOUKIjz6KpUN+sfF58eyDlek=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/qVTk5Izs8X66Pyuu1pyMKBdDtmk=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/rdL_nH9yD90vuAZxjdyIBnokPD0=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/siVsjXsbIR6FYa7gbFVrE1HqCBM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/t1MIa0lWZBSXytzzB1x0Y9UJCHM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uTJ8WXuh9Sx6kSYJJmLb7oFEnHM=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uvl+WXH4aTUhStF58DH32WHalEA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/wOTWmvXgDpQe+2BmnPrGM_+h+W4=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/xqixUKwTNN6ktOn2QPVlFNFq978=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/y22BrVXSroz5BPHcPzrdRQbyoIA=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/zYIQ2EKsr5WLNiiHXLn0eUNSlgw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/compile-file-map.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-af/values-af.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-am/values-am.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ar/values-ar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-as/values-as.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-az/values-az.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+es+419/values-b+es+419.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-be/values-be.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bg/values-bg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bn/values-bn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bs/values-bs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ca/values-ca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-cs/values-cs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-da/values-da.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-de/values-de.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-el/values-el.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es/values-es.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-et/values-et.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-eu/values-eu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fa/values-fa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fi/values-fi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr/values-fr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gl/values-gl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gu/values-gu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h320dp-port-v13/values-h320dp-port-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h360dp-land-v13/values-h360dp-land-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h480dp-land-v13/values-h480dp-land-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h480dp-v13/values-h480dp-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h550dp-port-v13/values-h550dp-port-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hi/values-hi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hr/values-hr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hu/values-hu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hy/values-hy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-in/values-in.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-is/values-is.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-it/values-it.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-iw/values-iw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ja/values-ja.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ka/values-ka.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kk/values-kk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-km/values-km.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kn/values-kn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ko/values-ko.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ky/values-ky.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-land/values-land.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ldrtl-v17/values-ldrtl-v17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lo/values-lo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lt/values-lt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lv/values-lv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mk/values-mk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ml/values-ml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mn/values-mn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mr/values-mr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ms/values-ms.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-my/values-my.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nb/values-nb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ne/values-ne.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nl/values-nl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-or/values-or.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pa/values-pa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pl/values-pl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-port/values-port.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt/values-pt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ro/values-ro.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ru/values-ru.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-si/values-si.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sk/values-sk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sl/values-sl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sq/values-sq.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sr/values-sr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sv/values-sv.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw/values-sw.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ta/values-ta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-te/values-te.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-th/values-th.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tl/values-tl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tr/values-tr.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uk/values-uk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ur/values-ur.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uz/values-uz.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v16/values-v16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v17/values-v17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v18/values-v18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v22/values-v22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v23/values-v23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v24/values-v24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v25/values-v25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v26/values-v26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v28/values-v28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v31/values-v31.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v34/values-v34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v35/values-v35.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-vi/values-vi.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w320dp-land-v13/values-w320dp-land-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w400dp-port-v13/values-w400dp-port-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-w600dp-land-v13/values-w600dp-land-v13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zu/values-zu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_map.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_new_report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_report_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/item_report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/compile-file-map.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_map.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_new_report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_report_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/item_report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/java_res/debug/processDebugJavaRes/out/META-INF/app_debug.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/AppDatabase_Impl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/AppDatabase_Impl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/data/dao/ReportDao_Impl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ActivityMainBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ActivityMapBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ActivityNewReportBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ActivityProfileBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ActivityReportDetailBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ActivitySettingsBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/haritap/databinding/ItemReportBinding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/local_only_symbol_list/debug/parseDebugLocalResources/R-def.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/manifest_merge_blame_file/debug/processDebugMainManifest/manifest-merger-blame-debug-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_java_res/debug/mergeDebugJavaResource/base.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_manifests/debug/processDebugManifest/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_launcher_background.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/drawable_ic_launcher_foreground.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_main.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_map.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_new_report.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_profile.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_report_detail.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_activity_settings.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/layout_item_report.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-anydpi-v26_ic_launcher_round.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-hdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-hdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-mdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-mdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xhdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xhdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxhdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxhdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxxhdpi_ic_launcher.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-xxxhdpi_ic_launcher_round.webp.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-af_values-af.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-am_values-am.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ar_values-ar.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-as_values-as.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-az_values-az.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-b+es+419_values-b+es+419.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-be_values-be.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bg_values-bg.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bn_values-bn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bs_values-bs.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ca_values-ca.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-cs_values-cs.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-da_values-da.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-de_values-de.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-el_values-el.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rAU_values-en-rAU.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rCA_values-en-rCA.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rGB_values-en-rGB.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rIN_values-en-rIN.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rXC_values-en-rXC.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es-rUS_values-es-rUS.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es_values-es.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-et_values-et.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-eu_values-eu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fa_values-fa.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fi_values-fi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr-rCA_values-fr-rCA.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gl_values-gl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gu_values-gu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h480dp-v13_values-h480dp-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h720dp-v13_values-h720dp-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hdpi-v4_values-hdpi-v4.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hi_values-hi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hr_values-hr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hu_values-hu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hy_values-hy.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-in_values-in.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-is_values-is.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-it_values-it.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-iw_values-iw.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ja_values-ja.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ka_values-ka.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kk_values-kk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-km_values-km.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kn_values-kn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ky_values-ky.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-land_values-land.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-large-v4_values-large-v4.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ldltr-v21_values-ldltr-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ldrtl-v17_values-ldrtl-v17.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lo_values-lo.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lt_values-lt.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lv_values-lv.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mk_values-mk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ml_values-ml.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mn_values-mn.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mr_values-mr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ms_values-ms.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-my_values-my.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-nb_values-nb.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ne_values-ne.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-night-v8_values-night-v8.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-nl_values-nl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-or_values-or.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pa_values-pa.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pl_values-pl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-port_values-port.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rBR_values-pt-rBR.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rPT_values-pt-rPT.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt_values-pt.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ro_values-ro.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ru_values-ru.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-si_values-si.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sk_values-sk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sl_values-sl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sq_values-sq.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sr_values-sr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sv_values-sv.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw600dp-v13_values-sw600dp-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw_values-sw.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ta_values-ta.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-te_values-te.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-th_values-th.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tl_values-tl.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uk_values-uk.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ur_values-ur.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uz_values-uz.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v16_values-v16.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v17_values-v17.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v18_values-v18.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v21_values-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v22_values-v22.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v23_values-v23.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v24_values-v24.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v25_values-v25.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v26_values-v26.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v28_values-v28.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v31_values-v31.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v34_values-v34.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v35_values-v35.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w400dp-port-v13_values-w400dp-port-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-watch-v20_values-watch-v20.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-watch-v21_values-watch-v21.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-xlarge-v4_values-xlarge-v4.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rCN_values-zh-rCN.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rHK_values-zh-rHK.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rTW_values-zh-rTW.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zu_values-zu.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/xml_backup_rules.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res/debug/mergeDebugResources/xml_data_extraction_rules.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/mergeDebugResources.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-af.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-am.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-as.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-az.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-b+es+419.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-b+sr+Latn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-be.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-bg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-bn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-bs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-el.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rAU.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rCA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rGB.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rIN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-en-rXC.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-es-rUS.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-et.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-eu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fr-rCA.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-gl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-gu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-h320dp-port-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-h360dp-land-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-h480dp-land-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-h480dp-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-h550dp-port-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-h720dp-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hdpi-v4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-hy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-in.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-is.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-iw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-kk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-km.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-kn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ko.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ky.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-land.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-large-v4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ldltr-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ldrtl-v17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-lo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-lt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-lv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-mk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ml.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-mn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-mr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ms.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-my.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-nb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ne.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-night-v8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-nl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-or.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-port.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pt-rBR.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pt-rPT.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-pt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ro.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-si.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sq.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-sw600dp-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ta.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-te.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-th.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-tl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-uk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-ur.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-uz.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-v35.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-w320dp-land-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-w360dp-port-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-w400dp-port-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-w600dp-land-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-watch-v20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-watch-v21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-xlarge-v4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zh-rCN.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zh-rHK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zh-rTW.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values-zu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/multi-v2/values.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/layout.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/merged_res_blame_folder/debug/mergeDebugResources/out/single/mergeDebugResources.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/navigation_json/debug/extractDeepLinksDebug/navigation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/nested_resources_validation_report/debug/generateDebugResources/nestedResourcesValidationReport.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_manifests/debug/processDebugManifestForPackage/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/activity_map.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/activity_new_report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/activity_report_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/activity_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/layout/item_report.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-hdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-hdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-mdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-mdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xhdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xhdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxhdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxhdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxxhdpi-v4/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxxhdpi-v4/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/packaged_res/debug/packageDebugResources/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/processed_res/debug/processDebugResources/out/output-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5ec0f9dd8d9cc2f2c06c417c7c2f86eeb30ab41a31f12d3f20228689e5a169d6_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5ec0f9dd8d9cc2f2c06c417c7c2f86eeb30ab41a31f12d3f20228689e5a169d6_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5ec0f9dd8d9cc2f2c06c417c7c2f86eeb30ab41a31f12d3f20228689e5a169d6_2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5ec0f9dd8d9cc2f2c06c417c7c2f86eeb30ab41a31f12d3f20228689e5a169d6_3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$applyFilter$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$applyFilter$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$onCreate$4.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$onCreate$5.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$onCreate$6.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$onResume$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity$onResume$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MainActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MapActivity$getCurrentLocation$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MapActivity$loadReportsOnMap$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MapActivity$loadReportsOnMap$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/MapActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/NewReportActivity$onCreate$2$1$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/NewReportActivity$onCreate$2$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/NewReportActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/ProfileActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/ReportDetailActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/SettingsActivity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/AppDatabase$Companion.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/AppDatabase.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/AppDatabase_Impl$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/AppDatabase_Impl.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$2.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$3.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$4.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$5.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$6.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$7.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$8.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl$9.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/dao/ReportDao_Impl.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/data/entity/ReportEntity.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ActivityMainBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ActivityMapBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ActivityNewReportBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ActivityProfileBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ActivityReportDetailBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ActivitySettingsBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/databinding/ItemReportBinding.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/ui/ReportAdapter$VH.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/com/example/haritap/ui/ReportAdapter.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/runtime_symbol_list/debug/processDebugResources/R.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/signing_config_versions/debug/writeDebugSigningConfigVersions/signing-config-versions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/source_set_path_map/debug/mapDebugSourceSetPaths/file-map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/stable_resource_ids_file/debug/processDebugResources/stableIds.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/intermediates/symbol_list_with_package_name/debug/processDebugResources/package-aware-r.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/inputs/source-to-output.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-attributes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/internal-name-to-source.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/proto.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/source-to-classes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/subtypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/jvm/kotlin/supertypes.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/counters.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/file-to-id.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/id-to-file.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/caches-jvm/lookups/lookups.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/cacheable/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/classpath-snapshot/shrunk-classpath-snapshot.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/ap-classpath-entries.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/backups/java/byRounds/1/com/example/haritap/data/AppDatabase_Impl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/backups/java/byRounds/1/com/example/haritap/data/dao/ReportDao_Impl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/caches.uptodate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/counters.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/file-to-id.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/id-to-file.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classLookups/lookups.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classpath-entries.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/classpath-structure.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/sourceToOutputs_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/counters.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/file-to-id.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/id-to-file.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbolLookups/lookups.tab_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/kspCaches/debug/symbols_i.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/compileDebugJavaWithJavac/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/META-INF/app_debug.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$applyFilter$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$applyFilter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$onCreate$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$onCreate$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$onCreate$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$onResume$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity$onResume$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MainActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MapActivity$getCurrentLocation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MapActivity$loadReportsOnMap$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MapActivity$loadReportsOnMap$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/MapActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/NewReportActivity$onCreate$2$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/NewReportActivity$onCreate$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/NewReportActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/ProfileActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/ReportDetailActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/SettingsActivity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/data/AppDatabase$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/data/AppDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/data/dao/ReportDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/data/entity/ReportEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/ui/ReportAdapter$VH.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/app/build/tmp/kotlin-classes/debug/com/example/haritap/ui/ReportAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/build/reports/problems/problems-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HaritaP/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/ProfileActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/ProfileActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/ReportDetailActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/ReportDetailActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/data/AppDataBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/data/AppDataBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/data/dao/ReportDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/data/dao/ReportDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/data/entity/ReportEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/haritap/data/entity/ReportEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_report_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,50 +957,207 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=v49dcmwszhaa4hhe)]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/Muhammet" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;muhammetklc&quot;
+  }
 }</component>
-  <component name="ProjectId" id="37NUg2WqkuBw5UN7eQOq57k7xDO" />
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/NisaK23BM/Mobil.git&quot;,
+    &quot;accountId&quot;: &quot;7810a7f3-757f-4392-91f2-0c792db4c628&quot;
+  }
+}</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\muham\.gradle\wrapper\dists\gradle-8.13-bin\5xuhj0ry160q40clulazy9h7d\gradle-8.13" javaHome="C:\Program Files\Android\Android Studio\jbr" gradleVersion="8.13" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="37ThGwo75FIbI4My7cPadzhMpZD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Android App.app.executor": "Run",
+    "Gradle.Tests in 'HaritaP.app'.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Muhammet",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/muham/Desktop/HaritaP",
-    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+    "last_opened_file_path": "C:/Users/muham/Desktop/akillikampus",
+    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="JetRunConfigurationType" nameIsGenerated="true">
-      <module name="HaritaP" />
-      <shortenClasspath name="NONE" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="HaritaP.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="RESTORE_FRESH_INSTALL_ONLY" value="false" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests in 'HaritaP.app'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'HaritaP.app'" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b8d799b1-966d-476b-8878-5de8051515cf" name="Changes" comment="" />
-      <created>1766743129730</created>
+      <changelist id="2895228a-c35c-4bc9-a691-a831533b5ae6" name="Changes" comment="" />
+      <created>1766932876395</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1766743129730</updated>
+      <updated>1766932876395</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.example.haritap">
+          <value>
+            <CheckInfo lastCheckTimestamp="1766934271773" />
+          </value>
+        </entry>
+        <entry key="com.example.haritap.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1766934271772" />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

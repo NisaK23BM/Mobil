@@ -49,11 +49,33 @@
         android:text="Durumu Güncelle"
         android:layout_marginTop="12dp" />
     <Button
+        android:id="@+id/btnFollowToggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Takip Et"
+        android:layout_marginTop="8dp"/>
+
+    <Button
         android:id="@+id/btnShowOnMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Haritada Göster"
         android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/btnDeleteReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Raporu Sil"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvDetailCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oluşturulma: -"
+        android:layout_marginTop="6dp" />
+
 
 
 </LinearLayout>

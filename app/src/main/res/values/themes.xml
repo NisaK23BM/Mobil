@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Uygulamanın ana teması. -->
-    <style name="Theme.HaritaP" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <style name="Theme.HaritaP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    name="Theme.HaritaP" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!--
             Burada uygulamanızın ana renklerini vb. özelleştirebilirsiniz.
             Şimdilik varsayılan haliyle bırakıyoruz.

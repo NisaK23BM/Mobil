@@ -21,6 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HaritaP">
 
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
         <activity android:name=".ReportDetailActivity" />
 
         <activity
@@ -37,14 +47,20 @@
             android:value="AIzaSyC87jAg6gAsRWf24aUuIwcbYgcHG0_AhIo" /> <!-- İLK AÇILAN SAYFA BURASI OLMALI -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity> <!-- MapActivity normal activity -->
+
+        <!-- MapActivity normal activity -->
         <activity android:name=".MapActivity" />
+        <activity android:name=".FollowedReportsActivity" />
+        <activity android:name=".AdminPanelActivity" />
+        <activity android:name=".AnnouncementsActivity" />
+
+
+
     </application>
 
 </manifest>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Panel"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="#66BB6A">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADMIN İŞLEMLERİ"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sil • Durum Güncelle • Duyuru Gönder"
+                android:textSize="14sp"
+                android:textColor="#EAEAEA"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <Button
+        android:id="@+id/btnGoMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kullanıcı Ekranına Git"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Çıkış Yap"/>
+    <Button
+        android:id="@+id/btnSendAnnouncement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duyuru Gönder"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnOpenAnnouncements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duyuruları Gör"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

@@ -12,6 +12,8 @@ data class ReportEntity(
     val description: String,
     val latitude: Double,
     val longitude: Double,
-    val createdAt: Long,
-    val status: String
+
+    val status: String,
+    val createdAt: Long = System.currentTimeMillis()
+
 )

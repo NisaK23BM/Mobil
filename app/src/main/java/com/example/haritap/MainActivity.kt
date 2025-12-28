@@ -19,6 +19,10 @@ import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.AdapterView
+import android.text.InputType
+import android.widget.LinearLayout
+import androidx.appcompat.app.AlertDialog
+
 
 
 
@@ -34,9 +38,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val openMapBtn = findViewById<Button>(R.id.openMapBtn)
         val openNewReportBtn = findViewById<Button>(R.id.openNewReportBtn)
         val profileButton = findViewById<Button>(R.id.profileButton)
+        val latest = AnnouncementStore.latest(this)
+        if (latest != null) {
+            Toast.makeText(this, "DUYURU: ${latest.title}", Toast.LENGTH_LONG).show()
+        }
+
 
         openMapBtn.setOnClickListener {
             val intent = Intent(this, MapActivity::class.java)
@@ -47,6 +57,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MapActivity::class.java)
             intent.putExtra("selectMode", true)  // konum seçme modu
             startActivity(intent)
+        }
+        findViewById<Button>(R.id.btnAnnouncements).setOnClickListener {
+            startActivity(Intent(this, AnnouncementsActivity::class.java))
         }
 
         profileButton.setOnClickListener {
@@ -89,6 +102,10 @@ class MainActivity : AppCompatActivity() {
                 applyFilter(f, q)
             }
         })
+        if (!UserPrefs.isProfileDone(this)) {
+            showFirstProfileDialog()
+        }
+
 
     }
     override fun onResume() {
@@ -120,6 +137,55 @@ class MainActivity : AppCompatActivity() {
                 adapter.submit(finalList)
             }
         }
+    }
+    private fun showFirstProfileDialog() {
+        val nameInput = EditText(this).apply {
+            hint = "Ad Soyad"
+            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_FLAG_CAP_WORDS
+        }
+
+        val emailInput = EditText(this).apply {
+            hint = "E-posta"
+            inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
+        }
+
+        val layout = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(48, 24, 48, 0)
+            addView(nameInput)
+            addView(emailInput)
+        }
+
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("Profil Bilgileri")
+            .setMessage("İlk kullanım için bilgileri giriniz.")
+            .setView(layout)
+            .setCancelable(false) // kapatamasın, zorunlu
+            .setPositiveButton("Kaydet", null)
+            .create()
+
+        dialog.setOnShowListener {
+            val btn = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+            btn.setOnClickListener {
+                val name = nameInput.text.toString().trim()
+                val email = emailInput.text.toString().trim()
+
+                if (name.isBlank()) {
+                    nameInput.error = "Ad Soyad gerekli"
+                    return@setOnClickListener
+                }
+                if (email.isBlank() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    emailInput.error = "Geçerli e-posta gir"
+                    return@setOnClickListener
+                }
+
+                UserPrefs.setProfile(this, name, email, "User", "Birim")
+
+                dialog.dismiss()
+            }
+        }
+
+        dialog.show()
     }
 
 }
