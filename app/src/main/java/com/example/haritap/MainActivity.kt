@@ -44,9 +44,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         openNewReportBtn.setOnClickListener {
-            val intent = Intent(this, NewReportActivity::class.java)
+            val intent = Intent(this, MapActivity::class.java)
+            intent.putExtra("selectMode", true)  // konum seçme modu
             startActivity(intent)
         }
+
         profileButton.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }

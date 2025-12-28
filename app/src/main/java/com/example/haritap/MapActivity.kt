@@ -72,10 +72,27 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         getCurrentLocation()
         loadReportsOnMap()
 
+        val selectMode = intent.getBooleanExtra("selectMode", false)
 
-        // HARİTAYA TIKLAYINCA → NEW REPORT
+        if (selectMode) {
+            Toast.makeText(this, "Rapor için haritada bir yer seç", Toast.LENGTH_LONG).show()
+
+            map.setOnMapClickListener { latLng ->
+                val i = Intent(this, NewReportActivity::class.java)
+                i.putExtra("lat", latLng.latitude)
+                i.putExtra("lng", latLng.longitude)
+                startActivity(i)
+            }
+        }
+
         map.setOnMarkerClickListener { marker ->
-            val id = marker.tag as? Long
+            val id: Long? = when (val t = marker.tag) {
+                is Long -> t
+                is Int -> t.toLong()
+                is String -> t.toLongOrNull()
+                else -> null
+            }
+
             if (id != null) {
                 val i = Intent(this, ReportDetailActivity::class.java)
                 i.putExtra("reportId", id)
@@ -86,6 +103,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
     }
+
 
     //  MEVCUT KONUMU AL
     private fun getCurrentLocation() {
@@ -163,5 +181,4 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
     }
-
 }

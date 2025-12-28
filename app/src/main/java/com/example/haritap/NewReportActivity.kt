@@ -57,6 +57,10 @@ class NewReportActivity : AppCompatActivity() {
 
         //  GÖNDER BUTONU
         btn.setOnClickListener {
+            if (lat == 0.0 && lng == 0.0) {
+                Toast.makeText(this, "Konum seçilmedi. Haritadan seçim yap.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             if (title.text.isBlank() || desc.text.isBlank()) {
                 Toast.makeText(this, "Lütfen tüm alanları doldurun", Toast.LENGTH_SHORT).show()
