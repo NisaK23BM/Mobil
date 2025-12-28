@@ -6,6 +6,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class RegisterActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -17,35 +18,47 @@ class RegisterActivity : AppCompatActivity() {
         val spRole = findViewById<Spinner>(R.id.spRole)
         val btn = findViewById<Button>(R.id.btnRegister)
 
-        spDept.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,
-            listOf("Sağlık", "Güvenlik", "Teknik", "İdari", "Öğrenci İşleri"))
+        // Departmanlar
+        spDept.adapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_spinner_dropdown_item,
+            listOf("Sağlık", "Güvenlik", "Teknik", "İdari", "Öğrenci İşleri")
+        )
 
-        spRole.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,
-            listOf("User", "Admin")) // sunum için
+        // Rol: Sadece User (Admin seçilemez)
+        val roleOptions = listOf("User")
+        spRole.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, roleOptions)
+        spRole.setSelection(0)
+        spRole.isEnabled = false  // ✅ admin seçilemesin
 
         btn.setOnClickListener {
             val name = etName.text.toString().trim()
             val email = etEmail.text.toString().trim()
             val pass = etPass.text.toString()
             val dept = spDept.selectedItem.toString()
-            val role = spRole.selectedItem.toString()
 
+            // Rolü sabitle
+            val role = "User"
+
+            // Basit kontrol
             if (name.isBlank() || email.isBlank() || pass.length < 4) {
                 Toast.makeText(this, "Bilgileri düzgün gir (şifre min 4)", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
+            // Admin hesabı kayıtla oluşturulamasın (sadece login ekranından admin/admin)
+            if (email == "admin") {
+                Toast.makeText(this, "Bu e-posta kullanılamaz.", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val (ok, msg) = AuthStore.register(this, UserAccount(name, email, pass, dept, role))
             Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
-            if (ok) {
-                val next = if (UserPrefs.getRole(this) == "Admin") {
-                    AdminPanelActivity::class.java
-                } else {
-                    MainActivity::class.java
-                }
-                startActivity(Intent(this, next))
-                finishAffinity()
 
+            if (ok) {
+                // Kayıt başarılı -> Login ekranına dön
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
             }
         }
     }

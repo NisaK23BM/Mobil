@@ -3,6 +3,7 @@ package com.example.haritap
 import android.content.Context
 
 object UserPrefs {
+
     private const val PREFS = "haritap_prefs"
 
     private const val KEY_NAME = "name"
@@ -15,7 +16,8 @@ object UserPrefs {
 
     private fun prefs(ctx: Context) = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 
-    fun isProfileDone(ctx: Context): Boolean = prefs(ctx).getBoolean(KEY_PROFILE_DONE, false)
+    fun isProfileDone(ctx: Context): Boolean =
+        prefs(ctx).getBoolean(KEY_PROFILE_DONE, false)
 
     fun setProfile(ctx: Context, name: String, email: String, role: String, dept: String) {
         prefs(ctx).edit()
@@ -27,14 +29,32 @@ object UserPrefs {
             .apply()
     }
 
-    fun getName(ctx: Context): String = prefs(ctx).getString(KEY_NAME, "Ad Soyad") ?: "Ad Soyad"
-    fun getEmail(ctx: Context): String = prefs(ctx).getString(KEY_EMAIL, "email@edu.tr") ?: "email@edu.tr"
-    fun getRole(ctx: Context): String = prefs(ctx).getString(KEY_ROLE, "User") ?: "User"
-    fun getDept(ctx: Context): String = prefs(ctx).getString(KEY_DEPT, "Birim") ?: "Birim"
+    // ✅ Admin hızlı ayarı (login admin/admin için)
+    fun setRoleDept(ctx: Context, role: String, dept: String) {
+        prefs(ctx).edit()
+            .putString(KEY_ROLE, role)
+            .putString(KEY_DEPT, dept)
+            .apply()
+    }
+
+    fun getName(ctx: Context): String =
+        prefs(ctx).getString(KEY_NAME, "Ad Soyad") ?: "Ad Soyad"
+
+    fun getEmail(ctx: Context): String =
+        prefs(ctx).getString(KEY_EMAIL, "email@edu.tr") ?: "email@edu.tr"
+
+    fun getRole(ctx: Context): String =
+        prefs(ctx).getString(KEY_ROLE, "User") ?: "User"
+
+    fun getDept(ctx: Context): String =
+        prefs(ctx).getString(KEY_DEPT, "Birim") ?: "Birim"
 
     fun clearProfile(ctx: Context) {
         prefs(ctx).edit()
-            .remove(KEY_NAME).remove(KEY_EMAIL).remove(KEY_ROLE).remove(KEY_DEPT)
+            .remove(KEY_NAME)
+            .remove(KEY_EMAIL)
+            .remove(KEY_ROLE)
+            .remove(KEY_DEPT)
             .remove(KEY_PROFILE_DONE)
             .remove(KEY_FOLLOWED_IDS)
             .apply()
@@ -50,7 +70,11 @@ object UserPrefs {
     fun toggleFollow(ctx: Context, reportId: Long): Boolean {
         val set = getFollowedIds(ctx).toMutableSet()
         val key = reportId.toString()
-        val nowFollowed = if (set.contains(key)) { set.remove(key); false } else { set.add(key); true }
+        val nowFollowed = if (set.contains(key)) {
+            set.remove(key); false
+        } else {
+            set.add(key); true
+        }
         prefs(ctx).edit().putStringSet(KEY_FOLLOWED_IDS, set).apply()
         return nowFollowed
     }
